@@ -53,7 +53,125 @@
     </div
     <h1>Que Pedo</h1>
     <p><b>This</b> is a test paragraph were I talk about life and the future.\n
-        This is another sentence</p> 
+        This is another sentence</p>
+    <button type="button" onclick="changeColor()">Set background Color</button>
+    <button type="button" onclick="epilepsy()">Start Epilepsy</button>
+    <button type = "button" onclick="myStopFunction()">Stop this Mayhem!</button>
+    <button type = "button" onclick="smoothColors()"> Smooth Colors</button>
+    <script>
+        var timeout;
+        var color_register = 0;
+        var r = 0;
+        var g = 0;
+        var b = 0;
+        function textChangeColor(col){
+            document.body.style.color = col;
+        }
+
+         function smoothColors(){
+            var smoothTimeout = 0;
+            var col;
+            var textCol;
+            if ( r < 256){
+                if(g < 256){
+                    if(b < 256){
+                        col = "rgb("+255+","+122+","+b+")";
+                        textCol = "rgb("+r+","+92+","+255+")";
+                        textChangeColor(textCol);
+                        changeColor(col);
+                        b++;
+                        smoothTimeout = setTimeout(smoothColors,10);
+                    }
+                    else {
+                        b = 0;
+                    }
+                    g++;
+                }
+                else {
+                    g = 0;
+                }
+                r++;
+            }
+            else {
+                r = 0;
+                g = 0;
+                b = 0;
+                clearTimeout(smoothTimeout);
+            }
+/*
+            for (r = 0; r < 256; r++){
+                for(g = 0; g < 256; g++){
+                    for(b = 0; b < 256; b++){
+                        col = "rgb("+r+","+g+","+b+")";
+                        textCol = "rgb("+b+","+g+","+r")";
+                        textChangeColor(textCol);
+                        changeColor(col);
+                        
+                    }
+                }
+            }
+*/
+                        /*col = "rgb("+210+","+92+","+92+")";
+                       textCol = "rgb("+210+","+140+","+92+")";
+                        textChangeColor(textCol);
+                        changeColor(col);*/
+        } 
+        function epilepsy(){
+                var random = Math.floor(Math.random()*11);
+                var col = "green";
+                if(random == color_register){
+                    if(random < 10){
+                        random += 1;
+                    }
+                    else {
+                        random -= 1;
+                    }
+                }
+                color_register = random;
+                if(random == 0){
+                    col = "red";   
+                }
+                if(random == 1){
+                    col = "blue";
+                }
+                if(random == 2){
+                    col = "yellow";
+                }
+                if(random == 3){
+                    col = "purple";
+                }
+                if(random == 4){
+                    col = "magenta";
+                }
+                if(random == 5){
+                    col = "brown";
+                }
+                if(random == 6){
+                    col = "black";
+                }
+                if(random == 7){
+                    col = "gray";
+                } 
+                if(random == 8){
+                    col = "maroon";
+                } 
+                if(random == 9){
+                    col = "olive";
+                }
+                if(random == 10){
+                    col = "teal";
+                } 
+                changeColor(col);
+               timeout = setTimeout(epilepsy,150);
+         }
+        function changeColor(col){
+            document.body.style.backgroundColor = col;
+        }
+        function myStopFunction(){
+            changeColor("white");
+            clearTimeout(timeout);
+        }
+    </script> 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
