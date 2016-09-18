@@ -6,8 +6,8 @@
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Sep 2016 17:42:05 -0500</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 17:42:05 -0500</lastBuildDate>
+    <pubDate>Sun, 18 Sep 2016 18:06:59 -0500</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 18:06:59 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -22,6 +22,23 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Just Testing #2</title>
+        <description>&lt;p&gt;So I wanted to test some Jekyll funtionality and here I am testing the posts.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Sep 2016 00:00:00 -0500</pubDate>
+        <link>http://bernovie.github.io/testing/2016/09/18/post2.html</link>
+        <guid isPermaLink="true">http://bernovie.github.io/testing/2016/09/18/post2.html</guid>
+        
+        <category>testing,</category>
+        
+        <category>yeah</category>
+        
+        
+        <category>testing</category>
         
       </item>
     
