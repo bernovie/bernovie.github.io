@@ -19,15 +19,15 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. 
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        -->
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -37,32 +37,82 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- Latest compiled and minified CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
+
+<!--   <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+-->
     <title>Hello World</title>
 </head>
 
-<body>
-    <div class="app">
-        <h1>Welcome to my test Site</h1>
+<body> 
+        <!--- Narrow Jumbotron Example -->
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class ="active" ><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Test Site #1</h3>
+      </div>
+    
+      <div class="jumbotron">
+          <!-- <img src="imgs/road.jpg"> -->
+        <h1>Jumbotron heading</h1>
+        <p class="lead">Welcom to Test Site #1. Here you will see a number of HTM5L, CSS, and JavaScript experiments.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
 
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Test #1</h4>
+          <p>Test with JavaScript and background Colors</p>
+          <button type="button" onclick="epilepsy()" class = "epilepsy">Start Epilepsy</button>
+          <button type = "button" onclick="myStopFunction()">Stop this Mayhem!</button>
+          <button type = "button" onclick="smoothColors()"> Smooth Colors</button>
+ 
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
-    </div
-    <p><b>This</b> is a test paragraph were I talk about life and the future.\n
-        This is another sentence</p>
-    <button type="button" onclick="changeColor()">Set background Color</button>
-    <button type="button" onclick="epilepsy()">Start Epilepsy</button>
-    <button type = "button" onclick="myStopFunction()">Stop this Mayhem!</button>
-    <button type = "button" onclick="smoothColors()"> Smooth Colors</button>
-    <script>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 Oviedo, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+    <!--- Narrow Jumbotron Example Finishes Here -->
+
+       <script>
         var timeout;
         var color_register = 0;
-        var r = 0;
-        var g = 0;
-        var b = 0;
+        var r = 255;
+        var g = 255;
+        var b = 255;
         function textChangeColor(col){
             document.body.style.color = col;
         }
@@ -71,30 +121,30 @@
             var smoothTimeout = 0;
             var col;
             var textCol;
-            if ( r < 256){
-                if(g < 256){
-                    if(b < 256){
-                        col = "rgb("+255+","+122+","+b+")";
-                        textCol = "rgb("+r+","+92+","+255+")";
+            if ( r >= 0){
+                if(g >= 0){
+                    if(b >= 0){
+                        col = "rgb("+10+","+g+","+b+")";
+                        textCol = "rgb("+r+","+g+","+b+")";
                         textChangeColor(textCol);
                         changeColor(col);
-                        b++;
+                        b--;
                         smoothTimeout = setTimeout(smoothColors,10);
                     }
                     else {
-                        b = 0;
+                        b = 255;
                     }
-                    g++;
+                    g--;
                 }
                 else {
-                    g = 0;
+                    g = 255;
                 }
-                r++;
+                r--;
             }
             else {
-                r = 0;
-                g = 0;
-                b = 0;
+                r = 255;
+                g = 255;
+                b = 255;
                 clearTimeout(smoothTimeout);
             }
 /*
@@ -167,15 +217,10 @@
             document.body.style.backgroundColor = col;
         }
         function myStopFunction(){
-            changeColor("white");
+            changeColor("rgba(70, 63, 58, 1)");
             clearTimeout(timeout);
         }
     </script> 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
 </body>
 
 </html>
