@@ -24,12 +24,12 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class ="active" ><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <li role="presentation" class ="active" ><a href="http://bernovie.github.io">Home</a></li>
+            <li role="presentation"><a href="http://bernovie.github.io/_site/jekyll/update/2016/09/15/welcome-to-jekyll.html">About</a></li>
+            <li role="presentation"><a href="http://bernovie.github.io/_site/jekyll/update/2016/09/18/test-post.html">Contact</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted"><a href = "http://bernovie.github.io">Test Site #1</a></h3>
+        <h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Test Site #1</a></h3>
       </div> 
 
       <div class="content">
