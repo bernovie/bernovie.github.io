@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <!--
     Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
@@ -55,20 +58,9 @@
 <body> 
         <!--- Narrow Jumbotron Example -->
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class ="active" ><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Test Site #1</h3>
-      </div>
-    
       <div class="jumbotron">
           <!-- <img src="imgs/road.jpg"> -->
-        <h1>Jumbotron heading</h1>
+        <h1>Test Site 001</h1>
         <p class="lead">Welcome to Test Site #1. Here you will see a number of HTM5L, CSS, and JavaScript experiments.</p>
         <p><a class="btn btn-lg btn-success" href="/about/index.html" role="button">Sign up today</a></p>
       </div>
@@ -99,11 +91,18 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
-
-      <footer class="footer">
-        <p>&copy; 2016 Oviedo, Inc.</p>
-      </footer>
-
+      <div class="home">
+        <h1 class="page-heading">Posts</h1>
+        <ul class="post-list">
+            {% for post in site.posts %}
+             <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h2> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h2>
+             </li>
+            {% endfor %}
+        </ul>
+             <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </div>    
     </div> <!-- /container -->
     <!--- Narrow Jumbotron Example Finishes Here -->
 
