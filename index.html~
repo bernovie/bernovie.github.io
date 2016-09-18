@@ -70,7 +70,7 @@
           <!-- <img src="imgs/road.jpg"> -->
         <h1>Jumbotron heading</h1>
         <p class="lead">Welcom to Test Site #1. Here you will see a number of HTM5L, CSS, and JavaScript experiments.</p>
-        <p><a class="btn btn-lg btn-success" href="/jekyll/update/2016/09/15/welcome-to-jekyll.html" role="button">Sign up today</a></p>
+        <p><a class="btn btn-lg btn-success" href="welcome-to-jekyll.html" role="button">Sign up today</a></p>
       </div>
 
       <div class="row marketing">
