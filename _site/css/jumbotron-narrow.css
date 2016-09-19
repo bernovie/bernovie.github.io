@@ -1,10 +1,37 @@
 /* Space out content a bit */
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(70, 63, 58, 1); 
 }
-
+.container .jumbotron .btn{
+  color: white;
+}
+.post-content .highlighter-rouge{
+  background-color: #544B45;
+  color: #C98686;
+}
+.container .home .post-list .post-link {
+  color: rgba(201, 134, 134, 1);
+}
+.container .home .post-list .post-meta{
+  color: rgba(147, 163, 177, 1);
+}
+.container .home .page-heading{
+  color: rgba(139, 148, 116, 1);
+  border-top: 1px solid #96877C;
+  padding-top: 10px;
+}
+.post-header .post-title{
+  color: rgba(139, 148, 116, 1);
+}
+.post-header .post-meta{
+  color: #93A3B1;
+}
+.post-content p{
+  color: #BFBDC1;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -91,6 +118,7 @@ body {
   width: 500px;
   height: 334px; 
 }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -109,3 +137,4 @@ body {
     border-bottom: 0;
   }
 }
+
