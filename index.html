@@ -108,6 +108,7 @@ layout: default
 
        <script>
         var timeout;
+        var smoothTimeout = 0;
         var color_register = 0;
         var r = 255;
         var g = 255;
@@ -117,7 +118,6 @@ layout: default
         }
 
          function smoothColors(){
-            var smoothTimeout = 0;
             var col;
             var textCol;
             if ( r >= 0){
@@ -144,7 +144,8 @@ layout: default
                 r = 255;
                 g = 255;
                 b = 255;
-                clearTimeout(smoothTimeout);
+                setTimeout(smoothColors,10);
+                //clearTimeout(smoothTimeout);
             }
 /*
             for (r = 0; r < 256; r++){
@@ -217,6 +218,7 @@ layout: default
         }
         function myStopFunction(){
             changeColor("rgba(70, 63, 58, 1)");
+            clearTimeout(smoothTimeout);
             clearTimeout(timeout);
         }
     </script> 
