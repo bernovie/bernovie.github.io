@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Codigo de Arbol"
+categories: testing
+---
+Visita esta pagina en `github` siguiendo este link: [bernovie.][bernovie]
+Si quieres copiar el árbol genalógico en tu pagina web, simplemente copia y pega el siguiente codio HTML:
+
+{% highlight html %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,3 +99,5 @@
 </body>
 </html>
 
+{% endhighlight %} 
+[bernovie]: https://github.com/bernovie/bernovie.github.io

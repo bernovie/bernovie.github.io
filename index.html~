@@ -60,9 +60,9 @@ layout: default
     <div class="container">
       <div class="jumbotron">
           <!-- <img src="imgs/road.jpg"> -->
-        <h1>Test Site 001</h1>
-        <p class="lead">Welcome to Test Site #1. Here you will see a number of HTML5, CSS, and JavaScript experiments.</p>
-        <p><a class="btn btn-lg btn-success" href="/about/index.html" role="button">Sign up today</a></p>
+        <h1>Árbol Genealógico</h1>
+        <p class="lead">Esta es una pagina presentando mi familia hasta 3 generaciones arriba de mi</p>
+        <p><a class="btn btn-lg btn-success" href="arbol.html" role="button">Prueba el Arbol</a></p>
       </div>
       <div class="chart" id="collapsable-example"></div>
  

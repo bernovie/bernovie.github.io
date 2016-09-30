@@ -17,6 +17,7 @@
         },
         nodeStructure: {
             image: "img/berny2.png",
+            collapsed: true,
             text: {
                 title: "Bernando Oviedo",
                 desc: "Mi nombre proviene del Germánico y significa \"fuerte como un oso\" o \"corazon de oso\"", 

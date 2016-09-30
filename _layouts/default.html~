@@ -29,10 +29,10 @@
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class ="active" ><a href="http://bernovie.github.io">Home</a></li>
             <li role="presentation"><a href="/about/index.html">About</a></li>
-            <li role="presentation"><a href="http://bernovie.github.io/arbol.html">Contact</a></li>
+            <li role="presentation"><a href="arbol.html">Contact</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Test Site #1</a></h3>
+        <h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Árbol Genealógico</a></h3>
       </div> 
 
       <div class="content">
