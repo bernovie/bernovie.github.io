@@ -1,0 +1,222 @@
+
+    var chart_config = {
+        chart: {
+            container: "#collapsable-example",
+            rootOrientation: "SOUTH",
+            animateOnInit: true,
+            levelSeparation: 100,  
+            node: {
+                collapsable: true
+            },
+            animation: {
+                nodeAnimation: "easeOutBounce",
+                nodeSpeed: 700,
+                connectorsAnimation: "bounce",
+                connectorsSpeed: 700
+            }
+        },
+        nodeStructure: {
+            image: "img/berny2.png",
+            text: {
+                title: "Bernando Oviedo",
+                desc: "Mi nombre proviene del germanico y significa \"fuerte como un oso\"", 
+            }, 
+            children: [
+                {
+                    image: "img/papa.png",
+                    text: {
+                        title: "Fernando Oviedo",
+                        desc: "Este es mi papa su nombre proviene del germanico y significa \“Hombre atrevido\”   La etimología de esta palabra consiste en dos partes: \“Firthu\”                              , que significa \“Paz\”, además de \“Libertad\”, y \“Nands\”, que significa \“Valentía\”",
+                    },
+                    collapsed: true,
+                    children: [
+                        {
+                            image: "img/neto.png",
+                            text: {
+                            title: "Neto Oviedo",
+                            desc: "Este es mi abuelo su nombre proviene del Germanico \"Ernest\" y significa \"El que lucha para vencer\"",
+                            },
+                            collapsed: true,
+                            children: [
+                                {
+                                    image: "img/male.png",
+                                    text: {
+                                        title: "Ernesto Oviedo",
+                                        desc: "Este es mi bisabuelo su nombre proviene del Germanico \"Ernest\" y significa \"El que lucha para vencer\"",
+                                    },
+                                },
+                                {
+                                    image: "img/female.png",
+                                    text: {
+                                        title: "Carolina Chapoy",
+                                        desc: "Esta es mi bisabuela su nombre proviene del Germánico \"Karl\" que significa \“Mujer muy inteligente\”",
+                                    },
+
+                                }
+                            ]
+
+                        },
+                        {
+                            image: "img/lety.png",
+                            text: {
+                                title: "Leticia Pastrana",
+                                desc: "Esta es mi abuela su nombre proviene del Latino \"Laetitia\" que significa \"La que trae la alegría\"",
+                            },
+                            collapsed: true,
+                            children: [
+                                {
+                                    image: "img/male.png",
+                                    text: {
+                                        title: "Hector",
+                                        desc: "Este es mi bisabuelo su nombre proviene del griego \"Héktor\" que significa \“El hombre posesivo\”",
+                                    },
+                                },
+                                {
+                                    image: "img/female.png",
+                                    text: {
+                                        title: "Berta Pastrana",
+                                        desc: "Este es mi bisabuela su nombre proviene del Germano y significa la ilustre o de personalidad brillante.",
+                                    },
+
+                                }
+                            ]
+
+                        }
+                    ]
+                },
+                {
+                    image: "img/mama.png",
+                     text: {
+                        title: "Valeria Morales",
+                        desc: "Esta es mi mama su nombre proviene del latín y significa \“Mujer sana\” o \“Valerosa.\” ",
+                     },
+                    collapsed: true,
+                    children: [
+                        {
+                            image: "img/poncho.png",
+                            text: {
+                                title: "Alfonso Morales",
+                                desc: "Este es mi abuelo su nombre proviene del Germánico \"Adelfuns\" y significa \"El que siempre esta dispuesto a combatir\"",
+                            },
+                            collapsed: true,
+                            children: [
+                                {
+                                    image: "img/male.png",
+                                    text: {
+                                        title: "Eugenio Morales",
+                                        desc: "Este es mi bisabuelo su nombre proviene del griego \"eu=bien\" y \"genia= origen\" y que significa de noble nacimiento.",
+                                    },
+                                },
+                                {
+                                    image: "img/female.png",
+                                    text: {
+                                        title: "Carmen Moya",
+                                        desc: "Esta es mi bisabuela su nombre proviene del hebreo \"Karmel\" que significa \“El jardín de Dios\” o \“Música\” o \“Poema\”",
+                                    },
+
+                                }
+                            ]
+
+                        },
+                        {
+                            image: "img/chayito.png",
+                            text: {
+                                title: "Rosario Sanchez",
+                                desc: "Esta es mi abuela su nombre proviene del Latín \"Rosarium\" que significa \"Rácimo de rosas\"",
+                            },
+                            collapsed: true,
+                            children: [
+                                {
+                                    image: "img/male.png",
+                                    text: {
+                                        title: "Alfonso Sanchez",
+                                        desc: "Este es mi bisabuelo su nombre proviene del Germánico \"Adelfuns\" y significa \"El que siempre esta dispuesto a combatir\"",
+                                    },
+                                },
+                                {
+                                    image: "img/female.png",
+                                    text: {
+                                        title: "Maria Castañeda",
+                                        desc: "Esta es mi bisabuela su nombre proviene del hebreo y significa la elegida, la amada de Dios.",
+                                    },
+
+                                }
+                            ]
+
+                        }
+                    ]
+                },
+                /*{
+                    pseudo: true,
+                    children: [
+                        {
+                            image: "img/cheryl.png"
+                        },
+                        {
+                            image: "img/pam.png"
+                        }
+                    ]
+                }*/
+            ]
+        }
+    };
+
+/* Array approach
+    var config = {
+        container: "#collapsable-example",
+
+        animateOnInit: true,
+        
+        node: {
+            collapsable: true
+        },
+        animation: {
+            nodeAnimation: "easeOutBounce",
+            nodeSpeed: 700,
+            connectorsAnimation: "bounce",
+            connectorsSpeed: 700
+        }
+    },
+    malory = {
+        image: "img/malory.png"
+    },
+
+    lana = {
+        parent: malory,
+        image: "img/lana.png"
+    }
+
+    figgs = {
+        parent: lana,
+        image: "img/figgs.png"
+    }
+
+    sterling = {
+        parent: malory,
+        childrenDropLevel: 1,
+        image: "img/sterling.png"
+    },
+
+    woodhouse = {
+        parent: sterling,
+        image: "img/woodhouse.png"
+    },
+
+    pseudo = {
+        parent: malory,
+        pseudo: true
+    },
+
+    cheryl = {
+        parent: pseudo,
+        image: "img/cheryl.png"
+    },
+
+    pam = {
+        parent: pseudo,
+        image: "img/pam.png"
+    },
+
+    chart_config = [config, malory, lana, figgs, sterling, woodhouse, pseudo, pam, cheryl];
+
+*/

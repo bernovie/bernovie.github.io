@@ -14,6 +14,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link href="/css/main.css" rel="stylesheet">
 <link href="/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
+<link href="Treant.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/perfect-scrollbar/perfect-scrollbar.css" type="text/css">
+
 
 <!--   <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
  </head>
@@ -26,7 +29,7 @@
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class ="active" ><a href="http://bernovie.github.io">Home</a></li>
             <li role="presentation"><a href="/about/index.html">About</a></li>
-            <li role="presentation"><a href="http://bernovie.github.io/testing/2016/09/18/post2.html">Contact</a></li>
+            <li role="presentation"><a href="arbol.html">Contact</a></li>
           </ul>
         </nav>
         <h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Test Site #1</a></h3>
@@ -93,10 +96,23 @@
       <div class="jumbotron">
           <!-- <img src="imgs/road.jpg"> -->
         <h1>Test Site 001</h1>
-        <p class="lead">Welcome to Test Site #1. Here you will see a number of HTM5L, CSS, and JavaScript experiments.</p>
+        <p class="lead">Welcome to Test Site #1. Here you will see a number of HTML5, CSS, and JavaScript experiments.</p>
         <p><a class="btn btn-lg btn-success" href="/about/index.html" role="button">Sign up today</a></p>
       </div>
-
+      <div class="chart" id="collapsable-example"></div>
+ 
+    <script src="/vendor/raphael.js"></script>
+    <script src="Treant.js"></script>
+    
+    <script src="/vendor/jquery.min.js"></script>
+    <script src="/vendor/jquery.easing.js"></script>
+        
+    <script src="collapsable.js"></script>
+    
+    <script>
+        tree = new Treant( chart_config );
+    </script>
+        
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>Test #1</h4>
@@ -126,6 +142,11 @@
       <div class="home">
         <h1 class="page-heading" style ="text-align: center">Posts</h1>
         <ul class="post-list">
+            
+             <li>
+                <span class="post-meta">Sep 21, 2016</span>
+                <h2> <a class="post-link" href="/2016/09/21/Make.html">Make</a></h2>
+             </li>
             
              <li>
                 <span class="post-meta">Sep 21, 2016</span>

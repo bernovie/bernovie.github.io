@@ -61,10 +61,23 @@ layout: default
       <div class="jumbotron">
           <!-- <img src="imgs/road.jpg"> -->
         <h1>Test Site 001</h1>
-        <p class="lead">Welcome to Test Site #1. Here you will see a number of HTM5L, CSS, and JavaScript experiments.</p>
+        <p class="lead">Welcome to Test Site #1. Here you will see a number of HTML5, CSS, and JavaScript experiments.</p>
         <p><a class="btn btn-lg btn-success" href="/about/index.html" role="button">Sign up today</a></p>
       </div>
-
+      <div class="chart" id="collapsable-example"></div>
+ 
+    <script src="/vendor/raphael.js"></script>
+    <script src="Treant.js"></script>
+    
+    <script src="/vendor/jquery.min.js"></script>
+    <script src="/vendor/jquery.easing.js"></script>
+        
+    <script src="collapsable.js"></script>
+    
+    <script>
+        tree = new Treant( chart_config );
+    </script>
+        
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>Test #1</h4>

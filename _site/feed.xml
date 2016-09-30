@@ -6,9 +6,20 @@
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Sep 2016 12:57:11 -0500</pubDate>
-    <lastBuildDate>Wed, 21 Sep 2016 12:57:11 -0500</lastBuildDate>
+    <pubDate>Thu, 29 Sep 2016 20:11:42 -0500</pubDate>
+    <lastBuildDate>Thu, 29 Sep 2016 20:11:42 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Make</title>
+        <description>
+</description>
+        <pubDate>Wed, 21 Sep 2016 00:00:00 -0500</pubDate>
+        <link>http://bernovie.github.io/2016/09/21/Make.html</link>
+        <guid isPermaLink="true">http://bernovie.github.io/2016/09/21/Make.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Iron Flesh</title>
