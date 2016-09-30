@@ -19,14 +19,14 @@
             image: "img/berny2.png",
             collapsed: true,
             text: {
-                title: "Bernando Oviedo",
+                title: "Bernando Oviedo Morales",
                 desc: "Mi nombre proviene del Germánico y significa \"fuerte como un oso\" o \"corazon de oso\"", 
             }, 
             children: [
                 {
                     image: "img/papa.png",
                     text: {
-                        title: "Fernando Oviedo",
+                        title: "Fernando Oviedo Pastrana",
                         desc: "Este es mi papa su nombre proviene del germanico y significa \“Hombre atrevido\”   La etimología de esta palabra consiste en dos partes: \“Firthu\”                              , que significa \“Paz\”, además de \“Libertad\”, y \“Nands\”, que significa \“Valentía\”",
                     },
                     collapsed: true,
@@ -34,7 +34,7 @@
                         {
                             image: "img/neto.png",
                             text: {
-                            title: "Neto Oviedo",
+                            title: "Neto Oviedo Chapoy",
                             desc: "Este es mi abuelo su nombre proviene del Germanico \"Ernest\" y significa \"El que lucha para vencer\"",
                             },
                             collapsed: true,
@@ -60,7 +60,7 @@
                         {
                             image: "img/lety.png",
                             text: {
-                                title: "Leticia Pastrana",
+                                title: "Leticia Pastrana Peñaloza",
                                 desc: "Esta es mi abuela su nombre proviene del Latino \"Laetitia\" que significa \"La que trae la alegría\"",
                             },
                             collapsed: true,
@@ -68,14 +68,14 @@
                                 {
                                     image: "img/male.png",
                                     text: {
-                                        title: "Hector",
+                                        title: "Hector Pastrana",
                                         desc: "Este es mi bisabuelo su nombre proviene del griego \"Héktor\" que significa \“El hombre posesivo\”",
                                     },
                                 },
                                 {
                                     image: "img/female.png",
                                     text: {
-                                        title: "Berta Pastrana",
+                                        title: "Berta Peñaloza",
                                         desc: "Este es mi bisabuela su nombre proviene del Germano y significa la ilustre o de personalidad brillante.",
                                     },
 
@@ -88,7 +88,7 @@
                 {
                     image: "img/mama.png",
                      text: {
-                        title: "Valeria Morales",
+                        title: "Valeria Morales Sanchez",
                         desc: "Esta es mi mama su nombre proviene del latín y significa \“Mujer sana\” o \“Valerosa.\” ",
                      },
                     collapsed: true,
@@ -96,7 +96,7 @@
                         {
                             image: "img/poncho.png",
                             text: {
-                                title: "Alfonso Morales",
+                                title: "Alfonso Morales Moya",
                                 desc: "Este es mi abuelo su nombre proviene del Germánico \"Adelfuns\" y significa \"El que siempre esta dispuesto a combatir\"",
                             },
                             collapsed: true,
