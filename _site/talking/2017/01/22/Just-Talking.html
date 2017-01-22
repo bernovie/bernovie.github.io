@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
+<link href="Treant.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/perfect-scrollbar/perfect-scrollbar.css" type="text/css">
+
+
+<!--   <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+ </head>
+
+<body> 
+        <!--- Narrow Jumbotron Example --> 
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class ="active" ><a href="http://bernovie.github.io">Home</a></li>
+            <li role="presentation"><a href="/about/index.html">About</a></li>
+            <li role="presentation"><a href="arbol.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Árbol Genealógico</a></h3>
+      </div> 
+
+      <div class="content">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Robot Testing</h1>
+    <p class="post-meta"><time datetime="2017-01-21T19:49:00-06:00" itemprop="datePublished">Jan 22, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Hello visitor and welcome to my blog. Here you will find extraordinary and strange things.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">usfirst</span><span class="o">.</span><span class="na">frc</span><span class="o">.</span><span class="na">team5526</span><span class="o">.</span><span class="na">robot</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.SampleRobot</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.RobotDrive</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Joystick</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Timer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Victor</span><span class="o">;</span>
+
+<span class="cm">/**
+ * This is a demo program showing the use of the RobotDrive class, specifically
+ * it contains the code necessary to operate a robot with tank drive.
+ *
+ * The VM is configured to automatically run this class, and to call the
+ * functions corresponding to each mode, as described in the SampleRobot
+ * documentation. If you change the name of this class or the package after
+ * creating this project, you must also update the manifest file in the resource
+ * directory.
+ *
+ * WARNING: While it may look like a good choice to use for your code if you're
+ * inexperienced, don't. Unless you know what you are doing, complex code will
+ * be much more difficult under this system. Use IterativeRobot or Command-Based
+ * instead if you're new.
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Robot</span> <span class="kd">extends</span> <span class="n">SampleRobot</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">motorChannel</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">joystickChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    
+    <span class="n">Victor</span> <span class="n">elevatorMotor</span><span class="o">;</span>
+    <span class="n">Joystick</span> <span class="n">joystick</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nf">Robot</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">elevatorMotor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Victor</span><span class="o">(</span><span class="n">motorChannel</span><span class="o">);</span>
+        <span class="n">joystick</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Joystick</span><span class="o">(</span><span class="n">joystickChannel</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">autonomous</span><span class="o">(){</span>
+        
+    <span class="o">}</span>
+    <span class="cm">/**
+     * Runs the motors with tank steering.
+     */</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">operatorControl</span><span class="o">()</span> <span class="o">{</span>
+        
+        <span class="k">while</span> <span class="o">(</span><span class="n">isOperatorControl</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">isEnabled</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">elevatorMotor</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">joystick</span><span class="o">.</span><span class="na">getY</span><span class="o">());</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Motor Value: "</span><span class="o">+</span><span class="n">elevatorMotor</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="o">}</span>
+        
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+
+  </div>
+
+  
+</article>
+
+    </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 Oviedo, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+    <!--- Narrow Jumbotron Example Finishes Here -->
+</body>
+</html>
+
