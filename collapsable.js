@@ -16,7 +16,7 @@
             }
         },
         nodeStructure: {
-            image: "img/berny2.png",
+            image: "img/figgs.png",
             collapsed: true,
             text: {
                 title: "Bernando Oviedo Morales",
@@ -24,7 +24,7 @@
             }, 
             children: [
                 {
-                    image: "img/papa.png",
+                    image: "img/figgs.png",
                     text: {
                         title: "Fernando Oviedo Pastrana",
                         desc: "Este es mi papa su nombre proviene del germanico y significa \“Hombre atrevido\”   La etimología de esta palabra consiste en dos partes: \“Firthu\”                              , que significa \“Paz\”, además de \“Libertad\”, y \“Nands\”, que significa \“Valentía\”",
@@ -32,7 +32,7 @@
                     collapsed: true,
                     children: [
                         {
-                            image: "img/neto.png",
+                            image: "img/figgs.png",
                             text: {
                             title: "Neto Oviedo Chapoy",
                             desc: "Este es mi abuelo su nombre proviene del Germanico \"Ernest\" y significa \"El que lucha para vencer\"",
@@ -58,7 +58,7 @@
 
                         },
                         {
-                            image: "img/lety.png",
+                            image: "img/lana.png",
                             text: {
                                 title: "Leticia Pastrana Peñaloza",
                                 desc: "Esta es mi abuela su nombre proviene del Latino \"Laetitia\" que significa \"La que trae la alegría\"",
@@ -86,7 +86,7 @@
                     ]
                 },
                 {
-                    image: "img/mama.png",
+                    image: "img/lana.png",
                      text: {
                         title: "Valeria Morales Sanchez",
                         desc: "Esta es mi mama su nombre proviene del latín y significa \“Mujer sana\” o \“Valerosa.\” ",
@@ -94,7 +94,7 @@
                     collapsed: true,
                     children: [
                         {
-                            image: "img/poncho.png",
+                            image: "img/sterling.png",
                             text: {
                                 title: "Alfonso Morales Moya",
                                 desc: "Este es mi abuelo su nombre proviene del Germánico \"Adelfuns\" y significa \"El que siempre esta dispuesto a combatir\"",
@@ -120,7 +120,7 @@
 
                         },
                         {
-                            image: "img/chayito.png",
+                            image: "img/lana.png",
                             text: {
                                 title: "Rosario Sanchez",
                                 desc: "Esta es mi abuela su nombre proviene del Latín \"Rosarium\" que significa \"Rácimo de rosas\"",

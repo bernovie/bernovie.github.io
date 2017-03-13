@@ -16,7 +16,7 @@
             }
         },
         nodeStructure: {
-            image: "img/berny2.png",
+            image: "img/figgs.png",
             collapsed: true,
             text: {
                 title: "Bernando Oviedo Morales",
@@ -24,7 +24,7 @@
             }, 
             children: [
                 {
-                    image: "img/papa.png",
+                    image: "img/figgs.png",
                     text: {
                         title: "Fernando Oviedo Pastrana",
                         desc: "Este es mi papa su nombre proviene del germanico y significa \“Hombre atrevido\”   La etimología de esta palabra consiste en dos partes: \“Firthu\”                              , que significa \“Paz\”, además de \“Libertad\”, y \“Nands\”, que significa \“Valentía\”",
@@ -32,7 +32,7 @@
                     collapsed: true,
                     children: [
                         {
-                            image: "img/neto.png",
+                            image: "img/figgs.png",
                             text: {
                             title: "Neto Oviedo Chapoy",
                             desc: "Este es mi abuelo su nombre proviene del Germanico \"Ernest\" y significa \"El que lucha para vencer\"",
@@ -58,7 +58,7 @@
 
                         },
                         {
-                            image: "img/lety.png",
+                            image: "img/lana.png",
                             text: {
                                 title: "Leticia Pastrana Peñaloza",
                                 desc: "Esta es mi abuela su nombre proviene del Latino \"Laetitia\" que significa \"La que trae la alegría\"",
@@ -68,14 +68,14 @@
                                 {
                                     image: "img/male.png",
                                     text: {
-                                        title: "Hector Pastrana",
+                                        title: "Hector Pastrana Moliner",
                                         desc: "Este es mi bisabuelo su nombre proviene del griego \"Héktor\" que significa \“El hombre posesivo\”",
                                     },
                                 },
                                 {
-                                    image: "img/female.png",
+                                    image: "img/female.png ",
                                     text: {
-                                        title: "Berta Peñaloza",
+                                        title: "Berta Peñaloza Soler",
                                         desc: "Este es mi bisabuela su nombre proviene del Germano y significa la ilustre o de personalidad brillante.",
                                     },
 
@@ -86,7 +86,7 @@
                     ]
                 },
                 {
-                    image: "img/mama.png",
+                    image: "img/lana.png",
                      text: {
                         title: "Valeria Morales Sanchez",
                         desc: "Esta es mi mama su nombre proviene del latín y significa \“Mujer sana\” o \“Valerosa.\” ",
@@ -94,7 +94,7 @@
                     collapsed: true,
                     children: [
                         {
-                            image: "img/poncho.png",
+                            image: "img/sterling.png",
                             text: {
                                 title: "Alfonso Morales Moya",
                                 desc: "Este es mi abuelo su nombre proviene del Germánico \"Adelfuns\" y significa \"El que siempre esta dispuesto a combatir\"",
@@ -104,14 +104,14 @@
                                 {
                                     image: "img/male.png",
                                     text: {
-                                        title: "Eugenio Morales",
+                                        title: "Eugenio Morales Huerta",
                                         desc: "Este es mi bisabuelo su nombre proviene del griego \"eu=bien\" y \"genia= origen\" y que significa de noble nacimiento.",
                                     },
                                 },
                                 {
                                     image: "img/female.png",
                                     text: {
-                                        title: "Carmen Moya",
+                                        title: "Carmen Moya Cadena",
                                         desc: "Esta es mi bisabuela su nombre proviene del hebreo \"Karmel\" que significa \“El jardín de Dios\” o \“Música\” o \“Poema\”",
                                     },
 
@@ -120,7 +120,7 @@
 
                         },
                         {
-                            image: "img/chayito.png",
+                            image: "img/lana.png",
                             text: {
                                 title: "Rosario Sanchez",
                                 desc: "Esta es mi abuela su nombre proviene del Latín \"Rosarium\" que significa \"Rácimo de rosas\"",
