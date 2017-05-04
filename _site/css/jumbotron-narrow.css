@@ -1,3 +1,38 @@
+/**
+ *Personal Styling
+ */
+.container .content h1{
+  color: rgba(139, 148, 116, 1);
+}
+.container .content .jumbotron h1{
+  color: #000000;
+}
+.container .content .jumbotron p{
+  color: #000000;
+}
+.container .content .link{
+  color: rgba(201, 134, 134, 1);
+  font-size: 18px;
+}
+.container .content p{
+    color: rgba(132, 140, 142, 1);
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    display: inline;
+}
+.container .content .lead {
+  font-size: 22px;
+}
+.container .content blockquote{
+  color: rgba(201, 134, 134, 1);
+  margin-bottom: 0px;
+}
+.container .content ol li{
+  color: rgba(98, 175, 96, 1);
+}
+/**
+ *Jumbotron Styling
+ */
 .frase {
   text-align: center;
   color: #8B9474;
@@ -15,10 +50,10 @@
 }
 /* optional Container STYLES */
 .chart { height: 600px; margin: 5px; width: 690px; }
-.Treant > .node { 
+.Treant > .node {
   padding: 3px;
-  border: 5px solid rgba(70, 63, 58, 1) ; 
-  border-radius: 3px; 
+  border: 5px solid rgba(70, 63, 58, 1) ;
+  border-radius: 3px;
 }
 .Treant img {padding-left: 30px; padding-right: 10px }
 
@@ -47,7 +82,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(70, 63, 58, 1); 
+  background-color: rgba(70, 63, 58, 1);
 }
 
 .container .jumbotron .btn{
@@ -95,7 +130,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  color: rgba(201, 134, 134, 1); 
+  color: rgba(201, 134, 134, 1);
 }
 
 /* Custom page footer */
@@ -131,7 +166,6 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
-  
 }
 .container .header .nav a{
   color: rgba(139, 148, 116, 1);
@@ -161,7 +195,7 @@ body {
 }
 .jumbotron img{
   width: 500px;
-  height: 334px; 
+  height: 334px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -182,4 +216,3 @@ body {
     border-bottom: 0;
   }
 }
-
