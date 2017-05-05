@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test Site</title>
-    <description>This is a test site for HTML5,CSS, and Javascript experiments. 
+    <description>This is a test site for HTML5,CSS, and Javascript experiments.
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 May 2017 21:43:09 -0500</pubDate>
-    <lastBuildDate>Wed, 03 May 2017 21:43:09 -0500</lastBuildDate>
+    <pubDate>Fri, 05 May 2017 01:46:12 -0500</pubDate>
+    <lastBuildDate>Fri, 05 May 2017 01:46:12 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
