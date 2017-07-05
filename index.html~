@@ -29,6 +29,10 @@ layout: jumbotron
 
           <h4>Mission Statement</h4>
           <p>To learn about my mission in life, you can click the following link: </p> <a class="link" href="mission.html">Mission Statement</a>
+
+          <h4>Chattie Chat</h4>
+          <p>A website I am doing to practice php: </p><a class="link" href="experiment/start_screen.php">Chattie_Chat.php</a>
+
         </div>
       </div>
       <div class="home">
