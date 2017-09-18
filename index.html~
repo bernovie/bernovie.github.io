@@ -31,22 +31,11 @@ layout: jumbotron
           <p>To learn about my mission in life, you can click the following link: </p> <a class="link" href="mission.html">Mission Statement</a>
 
           <h4>Chattie Chat</h4>
-          <p>A website I am doing to practice php: </p><a class="link" href="experiment/start_screen.php">Chattie_Chat.php</a>
+          <p>A website I am doing to practice php: </p><a class="link" href="experiment/experiment/start_screen.php">Chattie_Chat.php</a>
 
         </div>
       </div>
-      <div class="home">
-        <h1 class="page-heading" style ="text-align: center">Posts</h1>
-        <ul class="post-list">
-            {% for post in site.posts %}
-             <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <h2> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h2>
-             </li>
-            {% endfor %}
-        </ul>
-             <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-        </div>
+
     <!--- Narrow Jumbotron Example Finishes Here -->
 
        <script>

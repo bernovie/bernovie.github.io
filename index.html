@@ -1,10 +1,6 @@
 ---
 layout: jumbotron
----
-    <div class="multiple-borders">
-         <img src="http://orion.lcg.ufrj.br/Dr.Dobbs/books/book3/186_a.gif" class="binary"/>
-    </div>
-
+--- 
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>Test #1</h4>
@@ -35,18 +31,7 @@ layout: jumbotron
 
         </div>
       </div>
-      <div class="home">
-        <h1 class="page-heading" style ="text-align: center">Posts</h1>
-        <ul class="post-list">
-            {% for post in site.posts %}
-             <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <h2> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h2>
-             </li>
-            {% endfor %}
-        </ul>
-             <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-        </div>
+
     <!--- Narrow Jumbotron Example Finishes Here -->
 
        <script>
