@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Codigo de Arbol"
+title: "Code for the Tree"
 categories: testing
 ---
-Visita esta pagina en `github` siguiendo este link: [bernovie][bernovie]
-Si quieres copiar el árbol genalógico en tu pagina web, simplemente copia y pega el siguiente codio HTML:
+Visit this page in `github` following this link: [bernovie.][bernovie]
+If you want to embed the family tree in your website simply copy and paste the following HTML code:
 
 {% highlight html %}
 <!DOCTYPE html>

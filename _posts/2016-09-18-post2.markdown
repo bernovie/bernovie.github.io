@@ -1,7 +1,0 @@
----
-layout: post 
-title: "Just Testing #2"
-categories: testing
-tags: testing, yeah
----
-So I wanted to test some Jekyll funtionality and here I am testing the posts.
