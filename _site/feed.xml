@@ -2,13 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test Site</title>
-    <description>This is a test site for HTML5,CSS, and Javascript experiments.
+    <description>This is a test site for HTML5, CSS, and Javascript experiments.
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Sep 2017 18:24:31 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Sep 2017 18:24:31 -0500</lastBuildDate>
+    <pubDate>Fri, 22 Sep 2017 22:14:48 -0500</pubDate>
+    <lastBuildDate>Fri, 22 Sep 2017 22:14:48 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>How to Make an Automatic Mouse Clicker</title>
+        <description>&lt;p&gt;The other day I was searching for tutorials on the internet on how to create
+an automatic mouse clicker with Apple Script, but I just couldn’t find anything that worked. Some websites said it was possible by telling process “X” to call the function click, like so:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-applescript&quot; data-lang=&quot;applescript&quot;&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;System Events&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I tried it but it didn’t really work. The thing is that click can only click on UI elements like tabs of the application.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 00:00:00 -0500</pubDate>
+        <link>http://bernovie.github.io/2017/09/22/Automatic-Mouse-Clicker.html</link>
+        <guid isPermaLink="true">http://bernovie.github.io/2017/09/22/Automatic-Mouse-Clicker.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Code for the Tree</title>
