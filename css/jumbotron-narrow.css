@@ -84,7 +84,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(70, 63, 58, 1);
+  background-color: #292522;
 }
 
 .container .jumbotron .btn{
@@ -136,12 +136,30 @@ body {
 }
 
 /* Custom page footer */
-.footer {
-  padding-top: 50px;
+.footer {  
+  padding-top: 0px;
+  height: 30%;
   color: rgba(201, 134, 134, 1);
   border-top: 1px solid #e5e5e5;
+  position: static;
 }
 
+.company_name{
+  margin-right: 0px;
+  position: relative;
+  top: 0%;
+}
+
+.footer .categories{
+  width: 40%;
+  position: relative;
+  left: 60%;
+  top: -21px;
+}
+
+.footer p{
+  text-align: right;
+}
 /* Customize container */
 @media (min-width: 768px) {
   .container {

@@ -6,8 +6,8 @@
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Sep 2017 22:14:48 -0500</pubDate>
-    <lastBuildDate>Fri, 22 Sep 2017 22:14:48 -0500</lastBuildDate>
+    <pubDate>Tue, 03 Oct 2017 20:43:56 -0500</pubDate>
+    <lastBuildDate>Tue, 03 Oct 2017 20:43:56 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -24,9 +24,15 @@ an automatic mouse clicker with Apple Script, but I just couldn’t find anythin
 &lt;p&gt;I tried it but it didn’t really work. The thing is that click can only click on UI elements like tabs of the application.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 00:00:00 -0500</pubDate>
-        <link>http://bernovie.github.io/2017/09/22/Automatic-Mouse-Clicker.html</link>
-        <guid isPermaLink="true">http://bernovie.github.io/2017/09/22/Automatic-Mouse-Clicker.html</guid>
+        <link>http://bernovie.github.io/tutorial/%20blog/%20mouse/2017/09/22/Automatic-Mouse-Clicker.html</link>
+        <guid isPermaLink="true">http://bernovie.github.io/tutorial/%20blog/%20mouse/2017/09/22/Automatic-Mouse-Clicker.html</guid>
         
+        
+        <category>tutorial</category>
+        
+        <category> blog</category>
+        
+        <category> mouse</category>
         
       </item>
     

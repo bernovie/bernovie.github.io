@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Make an Automatic Mouse Clicker"
+categories: ["tutorial", " blog", " mouse"]
 ---
 
 The other day I was searching for tutorials on the internet on how to create

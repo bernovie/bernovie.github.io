@@ -1,9 +1,43 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-
+/**
+ *Personal Styling
+ */
+.container .content h1{
+  color: rgba(139, 148, 116, 1);
+}
+.container .content .jumbotron h1{
+  color: #000000;
+}
+.container .content .jumbotron p{
+  color: #000000;
+}
+.container .content .link{
+  color: rgba(201, 134, 134, 1);
+  font-size: 18px;
+}
+.container .content p{
+    color: rgba(132, 140, 142, 1);
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+}
+.container .content .lead {
+  font-size: 22px;
+}
+.container .content blockquote{
+  color: rgba(201, 134, 134, 1);
+  margin-bottom: 0px;
+}
+.container .content ol li{
+  color: rgba(98, 175, 96, 1);
+}
+/**
+ *Jumbotron Styling
+ */
 .frase {
   text-align: center;
+  color: #8B9474;
 }
 .multiple-borders {
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
@@ -18,10 +52,10 @@
 }
 /* optional Container STYLES */
 .chart { height: 600px; margin: 5px; width: 690px; }
-.Treant > .node { 
+.Treant > .node {
   padding: 3px;
-  border: 5px solid rgba(70, 63, 58, 1) ; 
-  border-radius: 3px; 
+  border: 5px solid rgba(70, 63, 58, 1) ;
+  border-radius: 3px;
 }
 .Treant img {padding-left: 30px; padding-right: 10px }
 
@@ -50,7 +84,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(70, 63, 58, 1); 
+  background-color: #292522;
 }
 
 .container .jumbotron .btn{
@@ -98,16 +132,34 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  color: rgba(201, 134, 134, 1); 
+  color: rgba(201, 134, 134, 1);
 }
 
 /* Custom page footer */
-.footer {
-  padding-top: 50px;
+.footer {  
+  padding-top: 0px;
+  height: 30%;
   color: rgba(201, 134, 134, 1);
   border-top: 1px solid #e5e5e5;
+  position: static;
 }
 
+.company_name{
+  margin-right: 0px;
+  position: relative;
+  top: 0%;
+}
+
+.footer .categories{
+  width: 40%;
+  position: relative;
+  left: 60%;
+  top: -21px;
+}
+
+.footer p{
+  text-align: right;
+}
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -134,7 +186,6 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
-  
 }
 .container .header .nav a{
   color: rgba(139, 148, 116, 1);
@@ -164,7 +215,7 @@ body {
 }
 .jumbotron img{
   width: 500px;
-  height: 334px; 
+  height: 334px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -185,4 +236,3 @@ body {
     border-bottom: 0;
   }
 }
-
