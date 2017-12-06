@@ -6,8 +6,8 @@
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Oct 2017 20:43:56 -0500</pubDate>
-    <lastBuildDate>Tue, 03 Oct 2017 20:43:56 -0500</lastBuildDate>
+    <pubDate>Wed, 06 Dec 2017 14:01:01 -0600</pubDate>
+    <lastBuildDate>Wed, 06 Dec 2017 14:01:01 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -22,6 +22,8 @@ an automatic mouse clicker with Apple Script, but I just couldn’t find anythin
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;I tried it but it didn’t really work. The thing is that click can only click on UI elements like tabs of the application.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #4F82AF&quot;&gt;[I have been a little bit busy with finals coming up, but afterwards I will finish this post]&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 00:00:00 -0500</pubDate>
         <link>http://bernovie.github.io/tutorial/%20blog/%20mouse/2017/09/22/Automatic-Mouse-Clicker.html</link>

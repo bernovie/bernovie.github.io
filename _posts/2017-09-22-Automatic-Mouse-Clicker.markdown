@@ -2,6 +2,7 @@
 layout: post
 title: "How to Make an Automatic Mouse Clicker"
 categories: ["tutorial", " blog", " mouse"]
+quantity: 3
 ---
 
 The other day I was searching for tutorials on the internet on how to create
@@ -16,3 +17,5 @@ end tell
 {% endhighlight %} 
 
 I tried it but it didn't really work. The thing is that click can only click on UI elements like tabs of the application.
+
+<span style="color: #4F82AF">[I have been a little bit busy with finals coming up, but afterwards I will finish this post]</span>

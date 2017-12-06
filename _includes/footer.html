@@ -1,4 +1,7 @@
 <footer class="footer">
   <p class="company_name" style="display: inline">&copy; 2016 Oviedo, Inc.</p>
-  <div class="categories"><p>{{page.categories}}</p></div>
+  <div class="categories"><p>{% for i in (0..page.quantity) %}
+      <div class="categories">{{page.categories[i]}}</div>
+      {% endfor %}
+    </p></div>
 </footer>

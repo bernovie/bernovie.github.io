@@ -1,6 +1,12 @@
 /**
  *Personal Styling
  */
+.categories:hover {
+  text-decoration: underline;
+}
+.categories{
+  display: inline;
+}
 .container .content h1{
   color: rgba(139, 148, 116, 1);
 }
