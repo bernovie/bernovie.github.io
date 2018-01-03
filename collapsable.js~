@@ -26,7 +26,7 @@
                 {
                     image: "img/figgs.png",
                     text: {
-                        title: "Fernando Oviedo Pastrana",
+                        title: "Fernando Oviedo",
                         /*desc: "Este es mi papa su nombre proviene del germanico y significa \“Hombre atrevido\”   La etimología de esta palabra consiste en dos partes: \“Firthu\”                              , que significa \“Paz\”, además de \“Libertad\”, y \“Nands\”, que significa \“Valentía\”",*/
                     },
                     collapsed: true,

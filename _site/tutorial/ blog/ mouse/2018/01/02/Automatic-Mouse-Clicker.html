@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/Treant.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/perfect-scrollbar/perfect-scrollbar.css" type="text/css">
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
+    <!--   <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+    
+ </head>
+
+<body>
+        <!--- Narrow Jumbotron Example -->
+    <div class="container">
+      <div class="header clearfix">
+<nav>
+  <ul class="nav nav-pills pull-right">
+    <li role="presentation"  ><a href="http://bernovie.github.io">Home</a></li>
+    <li role="presentation" ><a href="/blog/index.html">Blog</a></li>
+    <li role="presentation" ><a href="/experiments/index.html">Experiments</a></li>
+    <li role="presentation" ><a href="/about/index.html">About</a></li>
+    <li role="presentation" ><a href="/contact/index.html">Contact</a></li>
+  </ul>
+</nav>
+<h3 class="text-muted"><a href = "http://bernovie.github.io" style="color: rgba(201, 134, 134, 1)" >Test Site #1</a></h3>
+
+      </div>
+
+      <div class="content">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to Make an Automatic Mouse Clicker</h1>
+    <p class="post-meta"><time datetime="2018-01-02T00:00:00-06:00" itemprop="datePublished">Jan 2, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>The other day I was searching for tutorials on the internet on how to create
+an automatic mouse clicker with Apple Script, but I just couldn’t find anything that worked. Some websites said it was possible by telling process “X” to call the function click, like so:</p>
+
+<figure class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">tell</span><span class="w"> </span><span class="nb">application</span><span class="w"> </span><span class="s2">"System Events"</span><span class="w">
+          </span><span class="k">tell</span><span class="w"> </span><span class="nv">process</span><span class="w"> </span><span class="s2">"X"</span><span class="w">
+                    </span><span class="nv">click</span><span class="w"> </span><span class="nb">at</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">}</span><span class="w">
+          </span><span class="k">end</span><span class="w"> </span><span class="k">tell</span><span class="w">
+</span><span class="k">end</span><span class="w"> </span><span class="k">tell</span></code></pre></figure>
+
+<p>I tried it but it didn’t really work. The thing is that click can only click on UI elements of MacOSX Applications, but if you want to click in say a flash program running in a website you will have a hard time.</p>
+
+<p>The next best thing that I found along my journey was <a href="http://hints.macworld.com/article.php?story=2008051406323031">this blog post.</a> In it the author explains how he needed an automatic mouse clicker that could interact with videogame interface elements. This was just what I needed, since the Apple Script “click” function cannot interact with all UI elements. The solution was the following,</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// File: 
+// click.m
+//
+// Compile with: 
+// gcc -o click click.m -framework ApplicationServices -framework Foundation
+//
+// Usage:
+// ./click -x pixels -y pixels 
+// At the given coordinates it will click and release.
+</span>
+
+<span class="cp">#import &lt;Foundation/Foundation.h&gt;
+#import &lt;ApplicationServices/ApplicationServices.h&gt;
+</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="n">NSAutoreleasePool</span> <span class="o">*</span><span class="n">pool</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSAutoreleasePool</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+  <span class="n">NSUserDefaults</span> <span class="o">*</span><span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">];</span>
+
+
+  <span class="c1">// grabs command line arguments -x and -y
+</span>  <span class="c1">//
+</span>  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">args</span> <span class="n">integerForKey</span><span class="o">:</span><span class="err">@</span><span class="s">"x"</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">args</span> <span class="n">integerForKey</span><span class="o">:</span><span class="err">@</span><span class="s">"y"</span><span class="p">];</span>
+
+
+  <span class="c1">// The data structure CGPoint represents a point in a two-dimensional
+</span>  <span class="c1">// coordinate system.  Here, X and Y distance from upper left, in pixels.
+</span>  <span class="c1">//
+</span>  <span class="n">CGPoint</span> <span class="n">pt</span><span class="p">;</span>
+  <span class="n">pt</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">pt</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+
+
+  <span class="c1">// This is where the magic happens.  See CGRemoteOperation.h for details.
+</span>  <span class="c1">//
+</span>  <span class="c1">// CGPostMouseEvent( CGPoint        mouseCursorPosition,
+</span>  <span class="c1">//                   boolean_t      updateMouseCursorPosition,
+</span>  <span class="c1">//                   CGButtonCount  buttonCount,
+</span>  <span class="c1">//                   boolean_t      mouseButtonDown, ... )
+</span>  <span class="c1">//
+</span>  <span class="c1">// So, we feed coordinates to CGPostMouseEvent, put the mouse there,
+</span>  <span class="c1">// then click and release.
+</span>  <span class="c1">//
+</span>  <span class="n">CGPostMouseEvent</span><span class="p">(</span> <span class="n">pt</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+  <span class="n">CGPostMouseEvent</span><span class="p">(</span> <span class="n">pt</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+
+
+  <span class="p">[</span><span class="n">pool</span> <span class="n">release</span><span class="p">];</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p style="display: inline">This code would have to be saved in a file called <b style="color: green">"click.m"</b> and then compiled as</p>
+<p><b style="color: green">“gcc -o click click.m -framework ApplicationServices -framework Foundation”</b>
+If there are no errors an executable named “click” should be produced. To call it, you should be in the same directory as the executable and you call it as such,</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./click -x XCoordinate -y YCoordinate</code></pre></figure>
+
+<p style="color: #4F82AF">Note: XCoordinate and YCoordinate should be changed to the desired values.</p>
+<p>An automatic mouse clicker script can now be written pretty easily in Apple Script, all we have to do is to call the executable with the <b style="color: green">“do shell script”</b> command.</p>
+
+<figure class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="nb">do shell script</span><span class="w"> </span><span class="s2">"/Users/berny/Documents/workspace-dev/Apple_Scripts/click -x 500 -y 500"</span></code></pre></figure>
+
+<p style="color: #4F82AF">Note: <b>"Users/berny/Documents/workspace-dev/Apple_Scripts/click"</b> should be changed to the directory where the click executable is stored.</p>
+<p>You can use other Apple Script commands if for example you want to click an area of the screen every N seconds:</p>
+
+<figure class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">repeat</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">times</span><span class="w">
+	</span><span class="nb">do shell script</span><span class="w"> </span><span class="s2">"/Users/berny/Documents/workspace-dev/Apple_Scripts/click -x 500 -y 500"</span><span class="w">
+	</span><span class="nb">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w">
+</span><span class="k">end</span><span class="w"> </span><span class="k">repeat</span></code></pre></figure>
+
+<p>This is how I was able to make a script that clicks a button in a flash program every 6 seconds. I hope you found this blog post useful, if you have questions or need further help you can contact me at <b style="color: #C98686">bernyoviedo@utexas.edu</b>
+<!--<span style="color: #4F82AF">[I have been a little bit busy with finals coming up, but afterwards I will finish this post]</span>--></p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+<footer class="footer">
+  <p class="company_name" style="display: inline">&copy; 2016 Oviedo, Inc.</p>
+  <div class="categories"><p>
+      <div class="categories">tutorial</div>
+      
+      <div class="categories"> blog</div>
+      
+      <div class="categories"> mouse</div>
+      
+      <div class="categories"></div>
+      
+    </p></div>
+</footer>
+
+    </div> <!-- /container -->
+    <!--- Narrow Jumbotron Example Finishes Here -->
+
+<!-- Latest compiled and minified Jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -6,8 +6,8 @@
 </description>
     <link>http://bernovie.github.io/</link>
     <atom:link href="http://bernovie.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Dec 2017 14:01:01 -0600</pubDate>
-    <lastBuildDate>Wed, 06 Dec 2017 14:01:01 -0600</lastBuildDate>
+    <pubDate>Wed, 03 Jan 2018 01:08:30 -0600</pubDate>
+    <lastBuildDate>Wed, 03 Jan 2018 01:08:30 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -21,13 +21,87 @@ an automatic mouse clicker with Apple Script, but I just couldn’t find anythin
           &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;I tried it but it didn’t really work. The thing is that click can only click on UI elements like tabs of the application.&lt;/p&gt;
+&lt;p&gt;I tried it but it didn’t really work. The thing is that click can only click on UI elements of MacOSX Applications, but if you want to click in say a flash program running in a website you will have a hard time.&lt;/p&gt;
 
-&lt;p&gt;&lt;span style=&quot;color: #4F82AF&quot;&gt;[I have been a little bit busy with finals coming up, but afterwards I will finish this post]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The next best thing that I found along my journey was &lt;a href=&quot;http://hints.macworld.com/article.php?story=2008051406323031&quot;&gt;this blog post.&lt;/a&gt; In it the author explains how he needed an automatic mouse clicker that could interact with videogame interface elements. This was just what I needed, since the Apple Script “click” function cannot interact with all UI elements. The solution was the following,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// File: 
+// click.m
+//
+// Compile with: 
+// gcc -o click click.m -framework ApplicationServices -framework Foundation
+//
+// Usage:
+// ./click -x pixels -y pixels 
+// At the given coordinates it will click and release.
+&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#import &amp;lt;Foundation/Foundation.h&amp;gt;
+#import &amp;lt;ApplicationServices/ApplicationServices.h&amp;gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;NSAutoreleasePool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSAutoreleasePool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+
+  &lt;span class=&quot;c1&quot;&gt;// grabs command line arguments -x and -y
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integerForKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integerForKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+
+  &lt;span class=&quot;c1&quot;&gt;// The data structure CGPoint represents a point in a two-dimensional
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// coordinate system.  Here, X and Y distance from upper left, in pixels.
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;CGPoint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+  &lt;span class=&quot;c1&quot;&gt;// This is where the magic happens.  See CGRemoteOperation.h for details.
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// CGPostMouseEvent( CGPoint        mouseCursorPosition,
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//                   boolean_t      updateMouseCursorPosition,
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//                   CGButtonCount  buttonCount,
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//                   boolean_t      mouseButtonDown, ... )
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// So, we feed coordinates to CGPostMouseEvent, put the mouse there,
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// then click and release.
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;CGPostMouseEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;CGPostMouseEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p style=&quot;display: inline&quot;&gt;This code would have to be saved in a file called &lt;b style=&quot;color: green&quot;&gt;&quot;click.m&quot;&lt;/b&gt; and then compiled as&lt;/p&gt;
+&lt;p&gt;&lt;b style=&quot;color: green&quot;&gt;“gcc -o click click.m -framework ApplicationServices -framework Foundation”&lt;/b&gt;
+If there are no errors an executable named “click” should be produced. To call it, you should be in the same directory as the executable and you call it as such,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./click -x XCoordinate -y YCoordinate&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p style=&quot;color: #4F82AF&quot;&gt;Note: XCoordinate and YCoordinate should be changed to the desired values.&lt;/p&gt;
+&lt;p&gt;An automatic mouse clicker script can now be written pretty easily in Apple Script, all we have to do is to call the executable with the &lt;b style=&quot;color: green&quot;&gt;“do shell script”&lt;/b&gt; command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-applescript&quot; data-lang=&quot;applescript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/Users/berny/Documents/workspace-dev/Apple_Scripts/click -x 500 -y 500&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p style=&quot;color: #4F82AF&quot;&gt;Note: &lt;b&gt;&quot;Users/berny/Documents/workspace-dev/Apple_Scripts/click&quot;&lt;/b&gt; should be changed to the directory where the click executable is stored.&lt;/p&gt;
+&lt;p&gt;You can use other Apple Script commands if for example you want to click an area of the screen every N seconds:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-applescript&quot; data-lang=&quot;applescript&quot;&gt;&lt;span class=&quot;k&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/Users/berny/Documents/workspace-dev/Apple_Scripts/click -x 500 -y 500&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;repeat&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is how I was able to make a script that clicks a button in a flash program every 6 seconds. I hope you found this blog post useful, if you have questions or need further help you can contact me at &lt;b style=&quot;color: #C98686&quot;&gt;bernyoviedo@utexas.edu&lt;/b&gt;
+&lt;!--&lt;span style=&quot;color: #4F82AF&quot;&gt;[I have been a little bit busy with finals coming up, but afterwards I will finish this post]&lt;/span&gt;--&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 22 Sep 2017 00:00:00 -0500</pubDate>
-        <link>http://bernovie.github.io/tutorial/%20blog/%20mouse/2017/09/22/Automatic-Mouse-Clicker.html</link>
-        <guid isPermaLink="true">http://bernovie.github.io/tutorial/%20blog/%20mouse/2017/09/22/Automatic-Mouse-Clicker.html</guid>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 -0600</pubDate>
+        <link>http://bernovie.github.io/tutorial/%20blog/%20mouse/2018/01/02/Automatic-Mouse-Clicker.html</link>
+        <guid isPermaLink="true">http://bernovie.github.io/tutorial/%20blog/%20mouse/2018/01/02/Automatic-Mouse-Clicker.html</guid>
         
         
         <category>tutorial</category>
