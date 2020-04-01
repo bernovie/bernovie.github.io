@@ -16,7 +16,7 @@
 title: Code, math and other interesting things
 email: bernyoviedo@utexas.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This is a blog were I post random stuff that I consider interesting in the world of programming and math. Everynow and then you'll also have to tolerate posts were I post my opinion.
+  This is a blog were I post random stuff that I consider interesting in the world of programming and math. Everynow and then you'll also have to tolerate posts were I give my opinion.
 baseurl: ""  # the subpath of your site, e.g. /blog
 url: "http://bernovie.github.io" # the base hostname & protocol for your site
 twitter_username: bernovi
