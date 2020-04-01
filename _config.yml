@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Test Site
+title: Code, math and other interesting things
 email: bernyoviedo@utexas.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This is a test site for HTML5, CSS, and Javascript experiments.
+  This is a blog were I post random stuff that I consider interesting in the world of programming and math. Everynow and then you'll also have to tolerate posts were I post my opinion.
 baseurl: ""  # the subpath of your site, e.g. /blog
 url: "http://bernovie.github.io" # the base hostname & protocol for your site
 twitter_username: bernovi
